@@ -29,7 +29,7 @@ def html(location):
                     var message = document.createElement('li')
                     var content = document.createTextNode(event.data)
                     message.appendChild(content)
-                    messages.appendChild(message)
+                    messages.insertBefore(message, messages.firstChild);
                 }};
 
                 new_ws.onclose = function(e) {{
